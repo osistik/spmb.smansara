@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Pendaftaran</title>
+  <style>
+    body {
+      background: url('https://th.bing.com/th/id/OSK.HEROBqfJOk2ebI40nklloAXeokOTVO6GbRa6IevsBFzCpBQ?w=312&h=200') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    .form-container {
+      background-color: rgba(0,0,0,0.6);
+      padding: 20px;
+      margin: 40px auto;
+      width: 80%;
+      border-radius: 12px;
+    }
+    label, input, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+    }
+    input[type="submit"] {
+      width: auto;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+    input[type="submit"]:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Formulir Pendaftaran PPDB</h2>
+    <form action="simpan.php" method="POST">
+      <label>Nama Lengkap:</label>
+      <input type="text" name="nama" required>
+
+      <label>NISN:</label>
+      <input type="text" name="nisn" required>
+
+      <label>Asal Sekolah:</label>
+      <input type="text" name="asal_sekolah" required>
+
+      <label>Alamat:</label>
+      <textarea name="alamat" rows="4" required></textarea>
+
+      <label>No. HP:</label>
+      <input type="text" name="no_hp" required>
+
+      <input type="submit" value="Kirim Data">
+    </form>
+  </div>
+</body>
+</html>

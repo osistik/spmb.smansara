@@ -1,0 +1,13 @@
+
+CREATE DATABASE IF NOT EXISTS ppdb;
+USE ppdb;
+
+CREATE TABLE IF NOT EXISTS pendaftar (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100),
+    nisn VARCHAR(20),
+    asal_sekolah VARCHAR(100),
+    alamat TEXT,
+    no_hp VARCHAR(20),
+    waktu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
