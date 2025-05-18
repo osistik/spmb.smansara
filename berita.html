@@ -54,10 +54,42 @@
   </nav>
 
   <div class="content">
-    
-          <h1>Berita dan Pengumuman</h1>
-          <p>Update informasi seputar kegiatan dan pengumuman penting sekolah.</p>
-        
+  <h1>Berita dan Pengumuman</h1>
+  <p>Update informasi seputar kegiatan dan pengumuman penting sekolah.</p>
+
+  <h2>Tulis Berita Baru</h2>
+  <form id="formBerita">
+    <input type="text" id="judul" placeholder="Judul Berita" required style="width:100%; padding:10px; margin-bottom:10px;"><br>
+    <textarea id="isi" placeholder="Isi berita..." required rows="5" style="width:100%; padding:10px;"></textarea><br>
+    <button type="submit" style="padding:10px 20px; background:#00ccff; border:none; color:white; cursor:pointer;">Publikasikan</button>
+  </form>
+
+  <div id="daftarBerita" style="margin-top: 30px;">
+    <h2>Berita Terkini</h2>
+    <!-- Berita akan muncul di sini -->
   </div>
+</div>
+
+<script>
+  document.getElementById("formBerita").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const judul = document.getElementById("judul").value;
+    const isi = document.getElementById("isi").value;
+
+    const beritaBaru = document.createElement("div");
+    beritaBaru.innerHTML = `
+      <h3>${judul}</h3>
+      <p>${isi}</p>
+      <hr>
+    `;
+
+    document.getElementById("daftarBerita").prepend(beritaBaru);
+
+    // Reset form
+    document.getElementById("formBerita").reset();
+  });
+</script>
+
 </body>
 </html>
